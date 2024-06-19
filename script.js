@@ -1,74 +1,49 @@
-var video = document.getElementById("myVideo");
-video.volume = 0.5; // Establece el volumen al 50% (0.0 - 1.0)
-document.getElementById("playButton").addEventListener("click", function() {
-    var video = document.getElementById("myVideo");
-    video.volume = 0.5; // Establece el volumen al 50% al hacer clic en el botón de reproducción
-    video.play();
-  });
-  
-function toggleMenu() {
-    const navMenu = document.getElementById('nav-menu');
-    navMenu.classList.toggle('show');
-}
-
-// Ocultar cabecera al scrollear hacia abajo y mostrar al scrollear hacia arriba
-function toggleMenu() {
-    const navMenu = document.getElementById('nav-menu');
-    navMenu.classList.toggle('show');
-}
-
-let isTransmitting = false;
-
-function startRecording() {
-    if (!isTransmitting) {
-        document.getElementById('status').innerText = "Estado: Transmitiendo en vivo";
-        document.getElementById('startRecording').disabled = true;
-        document.getElementById('stopRecording').disabled = false;
-        isTransmitting = true;
-        // Lógica para iniciar la transmisión
-        console.log("Comenzar Transmisión");
-    }
-}
-
-function stopRecording() {
-    if (isTransmitting) {
-        document.getElementById('status').innerText = "Estado: No transmitiendo";
-        document.getElementById('startRecording').disabled = false;
-        document.getElementById('stopRecording').disabled = true;
-        isTransmitting = false;
-        // Lógica para detener la transmisión
-        console.log("Detener Transmisión");
-    }
-}
-
-function uploadClips() {
-    const files = document.getElementById('fileInput').files;
-    if (files.length > 0) {
-        for (let i = 0; i < files.length; i++) {
-            // Lógica para subir cada archivo
-            console.log("Subiendo clip:", files[i].name);
-        }
-        alert('Clips subidos exitosamente!');
-    } else {
-        alert('Por favor, selecciona uno o más clips para subir.');
-    }
-}
-
-// Ocultar cabecera al scrollear hacia abajo y mostrar al scrollear hacia arriba
-let lastScrollTop = 0;
-window.addEventListener('scroll', function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll > lastScrollTop) {
-        document.querySelector('header').style.top = '-70px';
-        document.querySelector('footer').style.bottom = '-50px';
-    } else {
-        document.querySelector('header').style.top = '0';
-        document.querySelector('footer').style.bottom = '0';
-    }
-    lastScrollTop = currentScroll;
-});
-
 document.addEventListener("DOMContentLoaded", function() {
+    // Funcionalidad del menú hamburguesa
+    document.querySelector('.hamburger-menu').addEventListener('click', function() {
+        document.querySelector('#nav-menu').classList.toggle('show');
+    });
+
+    // Funcionalidad para los iconos del menú hamburguesa
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+            document.querySelector('#nav-menu').classList.remove('show');
+        });
+    });
+
+    // Funcionalidad para los videos en la página index.html
+    window.addEventListener('resize', function() {
+        if (window.innerWidth < 768) {
+            document.querySelectorAll('.video-clip').forEach(function(video) {
+                video.style.width = '100%';
+            });
+        } else {
+            document.querySelectorAll('.video-clip').forEach(function(video, index) {
+                if ((index + 1) % 3 === 0) {
+                    video.style.marginRight = '0';
+                } else {
+                    video.style.marginRight = '20px';
+                }
+                video.style.width = 'calc(33.333% - 20px)';
+            });
+        }
+    });
+
+    // Funcionalidad para centrar el contenido
+    document.querySelectorAll('section').forEach(function(section) {
+        section.style.textAlign = 'center';
+    });
+
+    // Funcionalidad para cambiar el estilo de las letras
+    document.body.style.fontFamily = 'Helvetica, sans-serif';
+
+    // Funcionalidad para los iconos de redes sociales en el footer
+    document.querySelectorAll('.social-media a').forEach(function(icon) {
+        icon.style.fontSize = '24px';
+        icon.style.margin = '0 10px';
+    });
+
+    // Funcionalidad para el formulario de contacto con Formspree
     var contactForm = document.getElementById("contactForm");
     var statusMessage = document.getElementById("statusMessage");
 
@@ -95,4 +70,3 @@ document.addEventListener("DOMContentLoaded", function() {
         xhr.send(formData);
     });
 });
-
