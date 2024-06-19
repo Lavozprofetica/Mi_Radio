@@ -16,9 +16,12 @@ body {
     width: 90%;
     margin: 0 auto;
     padding: 20px;
+    margin-top: 60px; /* ajusta según el tamaño de tu cabecera */
+    padding: 20px;
 }
 
 /* Estilos de la cabecera */
+
 header {
     background-color: #333;
     color: #fff;
@@ -29,6 +32,14 @@ header {
     top: 0;
     z-index: 1000;
 }
+
+
+
+
+
+
+
+
 
 header h1 {
     margin: 0;
