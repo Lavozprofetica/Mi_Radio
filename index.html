@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Radio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tu Radio</h1>
+        <div class="menu-icon">&#9776;</div>
+        <nav class="menu-list">
+            <ul>
+                <li><a href="#resumen">Resumen</a></li>
+                <li><a href="#envivo">Radio en Vivo</a></li>
+                <li><a href="#clips">Clips</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="resumen">
+            <h2>Resumen de Tu Radio</h2>
+            <p>¡Bienvenidos a Tu Radio! Somos una estación que ofrece la mejor programación para todos los gustos. Desde música hasta noticias y entrevistas, tenemos todo lo que necesitas para tu entretenimiento.</p>
+        </section>
+        <section id="envivo">
+            <h2>Radio en Vivo</h2>
+            <!-- Aquí puedes agregar el reproductor de audio -->
+        </section>
+        <section id="clips">
+            <h2>Clips</h2>
+            <!-- Aquí puedes agregar la lista de clips -->
+        </section>
+        <section id="mapa">
+            <h2>Mapa de Ubicación</h2>
+            <!-- Aquí puedes agregar el mapa interactivo -->
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="https://formspree.io/your_email_here" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>Síguenos en:</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

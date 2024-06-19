@@ -1,0 +1,138 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos de la cabecera */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Estilos del menú hamburguesa */
+.menu-icon {
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos del menú hamburguesa desplegado */
+.menu-list {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+.menu-list ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-list ul li {
+    padding: 10px 0;
+}
+
+.menu-list ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos de las secciones */
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+section h2 {
+    color: #333;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu-list {
+        display: block;
+    }
+
+    .menu-list ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-list ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid #fff;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-list ul li:last-child {
+        border-bottom: none;
+    }
+
+    .container {
+        padding-top: 100px; /* Ajuste para evitar que el contenido quede detrás de la cabecera */
+    }
+
+    section {
+        padding: 10px;
+    }
+}
