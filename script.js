@@ -3,7 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('.hamburger-menu').addEventListener('click', function() {
         document.querySelector('#nav-menu').classList.toggle('show');
     });
-
+    function toggleMenu() {
+        const navMenu = document.getElementById('nav-menu');
+        navMenu.classList.toggle('show');
+    }
+    
+    document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
     // Funcionalidad para los iconos del menú hamburguesa
     document.querySelectorAll('.nav-link').forEach(function(link) {
         link.addEventListener('click', function() {
