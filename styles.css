@@ -209,7 +209,7 @@ footer {
 /* Mostrar el menú hamburguesa en pantallas pequeñas */
 @media (max-width: 768px) {
     .hamburger-menu {
-        display: block;
+        display:list-item;
         font-size: 24px; /* Tamaño del icono */
         color: #333; /* Color del icono */
         cursor: pointer; /* Mostrar el cursor como puntero al pasar sobre el icono */
