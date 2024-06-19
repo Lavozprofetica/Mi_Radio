@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // Resto de tu código...
+});
+
     // Funcionalidad para los videos en la página index.html
     window.addEventListener('resize', function() {
         if (window.innerWidth < 768) {
@@ -72,4 +75,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
         xhr.send(formData);
     });
-});
+
