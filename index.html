@@ -57,6 +57,27 @@
             <li><a href="#">Instagram</a></li>
         </ul>
     </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío convencional del formulario
+            
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://formspree.io/your_email_here');
+            xhr.setRequestHeader('Accept', 'application/json');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                if (xhr.status === 200) {
+                    document.getElementById('contactForm').style.display = 'none';
+                    document.getElementById('messageSent').style.display = 'block';
+                } else {
+                    alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
