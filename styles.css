@@ -136,19 +136,6 @@ footer {
     font-size: 24px;
 }
 
-
-/* Estilos para las redes sociales en el pie de página */
-.social-media {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-media a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-}
 /* Estilos para los clips de videos */
 #clips {
     display: grid;
@@ -161,6 +148,7 @@ footer {
     max-width: 100%;
     height: auto;
 }
+
 /* Estilos para las secciones de la segunda página */
 #transmitir, #subir-clips {
     margin-bottom: 40px;
@@ -209,10 +197,7 @@ footer {
 /* Mostrar el menú hamburguesa en pantallas pequeñas */
 @media (max-width: 768px) {
     .hamburger-menu {
-        display:list-item;
-        font-size: 24px; /* Tamaño del icono */
-        color: #333; /* Color del icono */
-        cursor: pointer; /* Mostrar el cursor como puntero al pasar sobre el icono */
+        display: block;
     }
 
     nav ul {
