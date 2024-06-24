@@ -1,6 +1,5 @@
 /* Estilos generales */
 body {
-    
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
@@ -88,7 +87,7 @@ section h2 {
 }
 
 .video-container video {
-    width: 80%;
+    width: 50%;
     max-width: 80%;
     height: auto;
     display: block;
