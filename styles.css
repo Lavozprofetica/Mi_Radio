@@ -60,9 +60,10 @@ header h1 {
 .content {
     margin-top: 60px; /* Ajusta según el tamaño de tu cabecera */
     padding: 20px;
-    max-width: 800px;
+    max-width: calc(100% - 40px); /* Reduce 20px de cada lado */
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
 section {
