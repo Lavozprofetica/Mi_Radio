@@ -47,3 +47,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const inputs = document.querySelectorAll('input, textarea');
+
+    inputs.forEach(input => {
+        input.addEventListener('blur', function () {
+            if (!this.value.trim()) {
+                this.previousElementSibling.style.top = '50%';
+                this.previousElementSibling.style.fontSize = '';
+            }
+        });
+    });
+});

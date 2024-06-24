@@ -191,6 +191,41 @@ form button:hover {
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 0 5px;
+    color: #888;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+    top: 5px;
+    font-size: 12px;
+    color: #333;
+}
+
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
