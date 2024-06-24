@@ -59,7 +59,7 @@
         </section>
         <section id="contacto">
             <h2>Contacto</h2>
-            <form id="contactForm">
+            <form id="contactForm" method="POST" action="https://formspree.io/f/tu-url">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Email:</label>
@@ -69,6 +69,7 @@
                 <button type="submit">Enviar</button>
             </form>
             <div id="messageSent" style="display: none;">¡Mensaje enviado con éxito!</div>
+            <div id="messageError" style="display: none;">Error al enviar el mensaje. Por favor, intenta nuevamente.</div>
         </section>
     </div>
     <footer>
