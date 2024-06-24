@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const messageError = document.getElementById('messageError');
 
     form.addEventListener('submit', async function (e) {
-        e.preventDefault();
+        e.preventDefault();  // Previene la acción por defecto del formulario
         
         const formData = new FormData(form);
         const action = form.action;
@@ -47,4 +47,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
