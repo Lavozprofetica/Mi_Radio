@@ -13,3 +13,38 @@ menuList.querySelectorAll('a').forEach(link => {
         menuList.style.display = 'none';
     });   
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    const messageSent = document.getElementById('messageSent');
+    const messageError = document.getElementById('messageError');
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const action = form.action;
+        
+        try {
+            const response = await fetch(action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                form.reset();
+                messageSent.style.display = 'block';
+                messageError.style.display = 'none';
+            } else {
+                throw new Error('Error en el envío del formulario');
+            }
+        } catch (error) {
+            messageError.style.display = 'block';
+            messageSent.style.display = 'none';
+        }
+    });
+});
+
