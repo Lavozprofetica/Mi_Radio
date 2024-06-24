@@ -11,6 +11,5 @@ menuIcon.addEventListener('click', () => {
 menuList.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         menuList.style.display = 'none';
-    });
-    
+    });   
 });
