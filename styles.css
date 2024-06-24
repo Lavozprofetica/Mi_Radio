@@ -1,7 +1,6 @@
 /* Estilos generales */
 body {
-    min-height: 100vh;
-    background: url(./Clips/FONDO.jpg) no-repeat center center fixed ;
+    
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
