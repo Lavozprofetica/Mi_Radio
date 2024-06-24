@@ -162,7 +162,7 @@ footer ul li a {
     }
 
     .content {
-        padding-top: 100px; /* Ajuste para evitar que el contenido quede detrás de la cabecera */
+        padding-top: 50px; /* Ajuste para evitar que el contenido quede detrás de la cabecera */
     }
 
     section {
