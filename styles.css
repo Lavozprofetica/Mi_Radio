@@ -82,23 +82,16 @@ section h2 {
 }
 
 /* Estilos de la sección de clips */
-#clips {
-    text-align: center;
-}
-
 .video-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .video-container video {
-    width: 300px;
-    height: 200px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Estilos del mapa */
