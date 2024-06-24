@@ -10,6 +10,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
+    text-align: center;
 }
 
 /* Estilos de la cabecera */
@@ -17,7 +18,6 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
@@ -27,10 +27,7 @@ header {
 header h1 {
     margin: 0;
 }
-#resumen{
-    padding-top: 200px;
-}
-/* Estilos del menú hamburguesa */
+
 .menu-icon {
     display: block;
     color: #fff;
@@ -38,7 +35,7 @@ header h1 {
     cursor: pointer;
 }
 
-/* Estilos del menú hamburguesa desplegado */
+/* Estilos del menú hamburguesa */
 .menu-list {
     display: none;
     position: absolute;
@@ -51,7 +48,6 @@ header h1 {
 .menu-list ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
 }
 
 .menu-list ul li {
@@ -65,8 +61,11 @@ header h1 {
 
 /* Estilos del contenido */
 .content {
-    margin-top: 120px; /* Ajusta según el tamaño de tu cabecera */
+    margin-top: 60px; /* Ajusta según el tamaño de tu cabecera */
     padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section {
@@ -74,10 +73,43 @@ section {
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
+    text-align: center;
+}
+
+#resumen {
+    padding-top: 20px; /* Agrega un padding-top específico a la sección del resumen */
 }
 
 section h2 {
     color: #333;
+}
+
+/* Estilos de la sección de clips */
+.video-container {
+    margin-bottom: 20px;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos del mapa */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
 }
 
 /* Estilos del footer */
@@ -135,5 +167,10 @@ footer ul li a {
 
     section {
         padding: 10px;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 300px;
     }
 }
