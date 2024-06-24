@@ -150,25 +150,6 @@ form {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.form-group {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-label {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #fff;
-    padding: 0 5px;
-    color: #888;
-    transition: 0.3s;
-    pointer-events: none;
-}
-
-
-
 
 form label {
     margin: 10px 0 5px;
@@ -193,7 +174,8 @@ form button {
     border: none;
     transition: background-color 0.3s ease;
 }
- form button:hover {
+
+form button:hover {
     background-color: #555;
 }
 
