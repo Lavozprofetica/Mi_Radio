@@ -200,13 +200,15 @@ form button {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+form button {
     background-color: #333;
     color: #fff;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease;
 }
-
  form button:hover {
     background-color: #555;
 }
